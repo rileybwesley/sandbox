@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initStickyHeader();
   initScrollAnimations();
-  initTestimonialCarousel();
   initCounterAnimation();
   initContactForm();
   setActiveNavLink();
@@ -106,97 +105,6 @@ function initScrollAnimations() {
   });
 
   elements.forEach(el => observer.observe(el));
-}
-
-/* --- Testimonial Carousel --- */
-function initTestimonialCarousel() {
-  const carousel = document.querySelector('.testimonials-carousel');
-  if (!carousel) return;
-
-  const track = carousel.querySelector('.testimonials-track');
-  const cards = carousel.querySelectorAll('.testimonial-card');
-  const dotsContainer = carousel.querySelector('.testimonials-dots');
-  if (!track || !cards.length || !dotsContainer) return;
-
-  let currentIndex = 0;
-  let startX = 0;
-  let isDragging = false;
-
-  // Determine cards visible based on viewport
-  function getVisibleCount() {
-    if (window.innerWidth >= 1024) return 3;
-    if (window.innerWidth >= 768) return 2;
-    return 1;
-  }
-
-  function getMaxIndex() {
-    return Math.max(0, cards.length - getVisibleCount());
-  }
-
-  function updateCarousel() {
-    const cardWidth = 100 / getVisibleCount();
-    cards.forEach(card => card.style.minWidth = cardWidth + '%');
-    const offset = -currentIndex * cardWidth;
-    track.style.transform = `translateX(${offset}%)`;
-    updateDots();
-  }
-
-  function updateDots() {
-    const maxIndex = getMaxIndex();
-    dotsContainer.innerHTML = '';
-    for (let i = 0; i <= maxIndex; i++) {
-      const dot = document.createElement('button');
-      dot.className = 'testimonials-dot' + (i === currentIndex ? ' testimonials-dot--active' : '');
-      dot.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
-      dot.addEventListener('click', () => {
-        currentIndex = i;
-        updateCarousel();
-      });
-      dotsContainer.appendChild(dot);
-    }
-  }
-
-  // Touch/swipe support
-  track.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    isDragging = true;
-  }, { passive: true });
-
-  track.addEventListener('touchend', (e) => {
-    if (!isDragging) return;
-    isDragging = false;
-    const diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) {
-      if (diff > 0 && currentIndex < getMaxIndex()) {
-        currentIndex++;
-      } else if (diff < 0 && currentIndex > 0) {
-        currentIndex--;
-      }
-      updateCarousel();
-    }
-  }, { passive: true });
-
-  // Auto-advance
-  let autoTimer = setInterval(() => {
-    currentIndex = currentIndex < getMaxIndex() ? currentIndex + 1 : 0;
-    updateCarousel();
-  }, 5000);
-
-  carousel.addEventListener('mouseenter', () => clearInterval(autoTimer));
-  carousel.addEventListener('mouseleave', () => {
-    autoTimer = setInterval(() => {
-      currentIndex = currentIndex < getMaxIndex() ? currentIndex + 1 : 0;
-      updateCarousel();
-    }, 5000);
-  });
-
-  // Handle resize
-  window.addEventListener('resize', () => {
-    if (currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
-    updateCarousel();
-  });
-
-  updateCarousel();
 }
 
 /* --- Counter Animation --- */
