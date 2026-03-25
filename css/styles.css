@@ -4,6 +4,49 @@
    ============================================ */
 
 /* --- CSS Custom Properties --- */
+
+/* --- Logo Toggle Button --- */
+.logo-toggle {
+  position: fixed;
+  top: 80px;
+  right: 16px;
+  z-index: 1100;
+  background: var(--color-navy);
+  color: var(--color-gold);
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-pill, 50px);
+  padding: 8px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.logo-toggle:hover {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  transform: scale(1.05);
+}
+
+.logo-toggle i {
+  font-size: 0.9rem;
+}
+
+/* Shrink hero logo when Logo B is active */
+.logo-b-active .hero__logo-wrap {
+  width: 70vw;
+  max-width: 380px;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
 :root {
   --color-navy: #1a2744;
   --color-navy-dark: #111b30;
@@ -566,7 +609,7 @@ ul, ol { list-style: none; }
   width: 90vw;
   max-width: 500px;
   aspect-ratio: 1;
-  margin-bottom: -100px;
+  margin-bottom: 0;
   padding: 24px;
   z-index: 0;
   animation: fadeInDown 0.8s ease-out;
@@ -1589,7 +1632,7 @@ body {
   h2 { font-size: 2rem; }
 
   .hero__title { font-size: 2.8rem; }
-  .hero__logo-wrap { width: 420px; height: 420px; margin-bottom: -100px; }
+  .hero__logo-wrap { width: 420px; height: 420px; margin-bottom: -20px; }
   .hero__buttons { flex-direction: row; justify-content: center; }
 
   .page-hero h1 { font-size: 2.5rem; }
@@ -1665,7 +1708,7 @@ body {
   h2 { font-size: 2.2rem; }
 
   .hero__title { font-size: 3.2rem; }
-  .hero__logo-wrap { width: 500px; height: 500px; margin-bottom: -130px; }
+  .hero__logo-wrap { width: 460px; height: 460px; margin-bottom: -30px; }
 
   .page-hero h1 { font-size: 3rem; }
 
@@ -1755,5 +1798,5 @@ body {
   }
 
   .hero__title { font-size: 3.5rem; }
-  .hero__logo-wrap { width: 560px; height: 560px; margin-bottom: -150px; }
+  .hero__logo-wrap { width: 480px; height: 480px; margin-bottom: -40px; }
 }

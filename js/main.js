@@ -10,7 +10,36 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounterAnimation();
   initContactForm();
   setActiveNavLink();
+  initLogoToggle();
 });
+
+/* --- Logo Toggle --- */
+function initLogoToggle() {
+  const btn = document.querySelector('.logo-toggle');
+  if (!btn) return;
+
+  let isAlt = localStorage.getItem('logoVersion') === 'alt';
+  if (isAlt) applyLogos(true);
+  updateLabel(isAlt);
+
+  btn.addEventListener('click', () => {
+    isAlt = !isAlt;
+    applyLogos(isAlt);
+    updateLabel(isAlt);
+    localStorage.setItem('logoVersion', isAlt ? 'alt' : 'default');
+  });
+
+  function applyLogos(alt) {
+    document.querySelectorAll('img[data-logo-swap]').forEach(img => {
+      img.src = alt ? img.dataset.logoAlt : img.dataset.logoDefault;
+    });
+    document.body.classList.toggle('logo-b-active', alt);
+  }
+
+  function updateLabel(alt) {
+    btn.innerHTML = '<i class="fas fa-repeat"></i> ' + (alt ? 'Logo B' : 'Logo A');
+  }
+}
 
 /* --- Mobile Navigation --- */
 function initNav() {
