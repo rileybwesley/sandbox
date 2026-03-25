@@ -567,6 +567,7 @@ ul, ol { list-style: none; }
   max-width: 500px;
   aspect-ratio: 1;
   margin-bottom: -100px;
+  padding: 24px;
   z-index: 0;
   animation: fadeInDown 0.8s ease-out;
 }
