@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Your Free Estimate — Papa Bear Power</title>
+  <meta name="description" content="Request a free electrical estimate from Papa Bear Power. Honest pricing, fast response, and professional service.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="logo.png" alt="Papa Bear Power" width="160" height="80">
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-desktop__link">Home</a>
+        <a href="about.html" class="nav-desktop__link">About</a>
+        <a href="services.html" class="nav-desktop__link">Services</a>
+        <a href="projects.html" class="nav-desktop__link">Projects</a>
+        <a href="contact.html" class="nav-desktop__link nav-desktop__link--active">Contact</a>
+        <a href="contact.html" class="btn btn--primary btn--sm nav-desktop__cta">Request Estimate</a>
+      </nav>
+      <div class="header__actions">
+        <a href="tel:+15551234567" class="header__call-btn">
+          <i class="fas fa-phone"></i>
+          <span>(555) 123-4567</span>
+        </a>
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-overlay">
+    <div class="nav-overlay__links">
+      <a href="index.html" class="nav-overlay__link">Home</a>
+      <a href="about.html" class="nav-overlay__link">About</a>
+      <a href="services.html" class="nav-overlay__link">Services</a>
+      <a href="projects.html" class="nav-overlay__link">Projects</a>
+      <a href="contact.html" class="nav-overlay__link">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn--primary nav-overlay__cta">Request Estimate</a>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="page-hero__content">
+      <h1>Get Your Free Estimate</h1>
+      <p>Tell us about your project and we'll get back to you with honest pricing — fast.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT FORM + INFO ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Form -->
+        <div class="animate-on-scroll animate-fade-up">
+          <h2 style="margin-bottom: 8px;">Describe Your Project</h2>
+          <p style="color: var(--color-text-light); margin-bottom: 28px;">Fill out the form below and we'll reach out to schedule a time to discuss your project. No spam, no pressure.</p>
+
+          <form id="estimate-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="John Smith" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 000-0000" required autocomplete="tel" inputmode="tel">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required autocomplete="email" inputmode="email">
+            </div>
+
+            <div class="form-group">
+              <label for="city">City / Area</label>
+              <input type="text" id="city" name="city" class="form-control" placeholder="Your city or neighborhood" autocomplete="address-level2">
+            </div>
+
+            <div class="form-group">
+              <label for="service-type">Type of Service <span class="required">*</span></label>
+              <select id="service-type" name="service_type" class="form-control" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option value="residential">Residential Electrical</option>
+                <option value="commercial">Commercial Electrical</option>
+                <option value="panel-upgrade">Panel Upgrade</option>
+                <option value="lighting">Lighting Installation</option>
+                <option value="repairs">Repairs &amp; Troubleshooting</option>
+                <option value="wiring">Wiring / Rewiring</option>
+                <option value="outdoor-security">Outdoor &amp; Security Lighting</option>
+                <option value="ev-charger">EV Charger Installation</option>
+                <option value="generator">Generator Hookup</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Description of Work</label>
+              <textarea id="description" name="description" class="form-control" placeholder="Tell us a bit about what you need done — the more detail, the better we can help." rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Preferred Contact Method</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="contact_method" value="phone" checked> Phone Call
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="contact_method" value="text"> Text Message
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="contact_method" value="email"> Email
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Submit Request
+            </button>
+          </form>
+
+          <!-- Success State -->
+          <div class="form-success">
+            <div class="form-success__icon"><i class="fas fa-check"></i></div>
+            <h3>Request Received!</h3>
+            <p>Thank you for reaching out. We'll review your project details and get back to you within one business day.</p>
+            <a href="index.html" class="btn btn--outline" style="margin-top: 16px;">Back to Home</a>
+          </div>
+        </div>
+
+        <!-- Contact Info Panel -->
+        <div class="animate-on-scroll animate-fade-up" style="transition-delay: 0.15s;">
+          <div class="contact-info-panel">
+            <h3 style="color: var(--color-white); margin-bottom: 24px; font-size: 1.2rem;">Prefer to Talk?</h3>
+
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-info-item__text">
+                <h4>Call Us</h4>
+                <a href="tel:+15551234567">(555) 123-4567</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-info-item__text">
+                <h4>Email Us</h4>
+                <a href="mailto:info@papabearpower.com" style="font-size: 0.95rem;">info@papabearpower.com</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-info-item__text">
+                <h4>Service Area</h4>
+                <p>Greater metro area and surrounding communities within 50 miles</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon"><i class="fas fa-clock"></i></div>
+              <div class="contact-info-item__text">
+                <h4>Hours</h4>
+                <p>Monday – Friday: 7:00 AM – 6:00 PM<br>Saturday: By appointment<br>Sunday: Closed</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon"><i class="fas fa-bolt"></i></div>
+              <div class="contact-info-item__text">
+                <h4>Emergency?</h4>
+                <p>Call us directly for same-day emergency service availability</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust badges -->
+          <div style="margin-top: 24px; padding: 20px; background: var(--color-light-bg); border-radius: var(--radius-lg); text-align: center;">
+            <p style="font-weight: 600; color: var(--color-navy); margin-bottom: 12px; font-size: 0.95rem;">You're in Good Hands</p>
+            <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+              <div style="text-align: center;">
+                <i class="fas fa-shield-halved" style="font-size: 1.5rem; color: var(--color-gold); display: block; margin-bottom: 4px;"></i>
+                <span style="font-size: 0.75rem; color: var(--color-text-light);">Licensed &amp; Insured</span>
+              </div>
+              <div style="text-align: center;">
+                <i class="fas fa-star" style="font-size: 1.5rem; color: var(--color-gold); display: block; margin-bottom: 4px;"></i>
+                <span style="font-size: 0.75rem; color: var(--color-text-light);">5-Star Rated</span>
+              </div>
+              <div style="text-align: center;">
+                <i class="fas fa-handshake" style="font-size: 1.5rem; color: var(--color-gold); display: block; margin-bottom: 4px;"></i>
+                <span style="font-size: 0.75rem; color: var(--color-text-light);">Free Estimates</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="logo.png" alt="Papa Bear Power" class="footer__logo" width="160" height="80">
+          <p class="footer__tagline">Reliable electrical work done right. Safe, professional service you can trust.</p>
+        </div>
+        <div>
+          <h4 class="footer__heading">Navigation</h4>
+          <div class="footer__links">
+            <a href="index.html" class="footer__link"><i class="fas fa-chevron-right"></i> Home</a>
+            <a href="about.html" class="footer__link"><i class="fas fa-chevron-right"></i> About</a>
+            <a href="services.html" class="footer__link"><i class="fas fa-chevron-right"></i> Services</a>
+            <a href="projects.html" class="footer__link"><i class="fas fa-chevron-right"></i> Projects</a>
+            <a href="contact.html" class="footer__link"><i class="fas fa-chevron-right"></i> Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Services</h4>
+          <div class="footer__links">
+            <a href="services.html" class="footer__link">Residential Electrical</a>
+            <a href="services.html" class="footer__link">Commercial Electrical</a>
+            <a href="services.html" class="footer__link">Panel Upgrades</a>
+            <a href="services.html" class="footer__link">Lighting Installation</a>
+            <a href="services.html" class="footer__link">Repairs &amp; Troubleshooting</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contact Us</h4>
+          <div class="footer__contact-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+15551234567">(555) 123-4567</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@papabearpower.com">info@papabearpower.com</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Serving the greater metro area</span>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Mon–Fri 7am–6pm, Sat by appt</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        &copy; 2026 Papa Bear Power. All rights reserved. | <a href="#">Powered by Jobryx</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE CTA BAR ===== -->
+  <div class="mobile-cta-bar">
+    <a href="tel:+15551234567" class="mobile-cta-bar__btn">
+      <i class="fas fa-phone"></i> Call Now
+    </a>
+    <a href="contact.html" class="mobile-cta-bar__btn">
+      <i class="fas fa-file-lines"></i> Request Estimate
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

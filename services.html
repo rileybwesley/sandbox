@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services — Papa Bear Power</title>
+  <meta name="description" content="Papa Bear Power offers residential and commercial electrical services including panel upgrades, lighting, wiring, repairs, EV chargers, and more.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="logo.png" alt="Papa Bear Power" width="160" height="80">
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-desktop__link">Home</a>
+        <a href="about.html" class="nav-desktop__link">About</a>
+        <a href="services.html" class="nav-desktop__link nav-desktop__link--active">Services</a>
+        <a href="projects.html" class="nav-desktop__link">Projects</a>
+        <a href="contact.html" class="nav-desktop__link">Contact</a>
+        <a href="contact.html" class="btn btn--primary btn--sm nav-desktop__cta">Request Estimate</a>
+      </nav>
+      <div class="header__actions">
+        <a href="tel:+15551234567" class="header__call-btn">
+          <i class="fas fa-phone"></i>
+          <span>(555) 123-4567</span>
+        </a>
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-overlay">
+    <div class="nav-overlay__links">
+      <a href="index.html" class="nav-overlay__link">Home</a>
+      <a href="about.html" class="nav-overlay__link">About</a>
+      <a href="services.html" class="nav-overlay__link">Services</a>
+      <a href="projects.html" class="nav-overlay__link">Projects</a>
+      <a href="contact.html" class="nav-overlay__link">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn--primary nav-overlay__cta">Request Estimate</a>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="page-hero__content">
+      <h1>Our Services</h1>
+      <p>From homes to businesses, small fixes to big projects — we've got you covered.</p>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES GRID ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll animate-fade-up">
+        <h2>What We Offer</h2>
+        <p>Professional electrical services delivered with care, precision, and a commitment to doing things right the first time.</p>
+      </div>
+      <div class="services-grid stagger-children">
+
+        <!-- Residential -->
+        <div class="service-card animate-on-scroll animate-fade-up">
+          <div class="service-card__icon"><i class="fas fa-house"></i></div>
+          <h3 class="service-card__title">Residential Electrical</h3>
+          <p class="service-card__text">Complete home electrical services from new construction wiring to renovations, outlet installations, and code updates. We treat every home like it's our own — because your family's safety matters.</p>
+          <a href="contact.html" class="service-card__link">Request Estimate <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Commercial -->
+        <div class="service-card animate-on-scroll animate-fade-up">
+          <div class="service-card__icon"><i class="fas fa-building"></i></div>
+          <h3 class="service-card__title">Commercial Electrical</h3>
+          <p class="service-card__text">Reliable electrical solutions for businesses of all sizes. Office buildouts, retail spaces, shops, and warehouses. Minimal disruption to your operations, maximum quality in every connection.</p>
+          <a href="contact.html" class="service-card__link">Request Estimate <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Panel Upgrades -->
+        <div class="service-card animate-on-scroll animate-fade-up">
+          <div class="service-card__icon"><i class="fas fa-car-battery"></i></div>
+          <h3 class="service-card__title">Panel Upgrades</h3>
+          <p class="service-card__text">Outdated or undersized panel? We upgrade to modern, high-capacity panels that handle today's electrical demands safely. 100A to 200A, Federal Pacific replacements, and more.</p>
+          <a href="contact.html" class="service-card__link">Request Estimate <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Lighting -->
+        <div class="service-card animate-on-scroll animate-fade-up">
+          <div class="service-card__icon"><i class="fas fa-lightbulb"></i></div>
+          <h3 class="service-card__title">Lighting Installation</h3>
+          <p class="service-card__text">Transform your space with professional lighting. Recessed lights, chandeliers, under-cabinet LEDs, and smart lighting systems — installed cleanly and correctly.</p>
+          <a href="contact.html" class="service-card__link">Request Estimate <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Repairs -->
+        <div class="service-card animate-on-scroll animate-fade-up">
+          <div class="service-card__icon"><i class="fas fa-wrench"></i></div>
+          <h3 class="service-card__title">Repairs &amp; Troubleshooting</h3>
+          <p class="service-card__text">Flickering lights, dead outlets, tripping breakers — electrical problems don't wait, and neither do we. Fast, accurate diagnosis and repair to get things working safely again.</p>
+          <a href="contact.html" class="service-card__link">Request Estimate <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Wiring -->
+        <div class="service-card animate-on-scroll animate-fade-up">
+          <div class="service-card__icon"><i class="fas fa-plug"></i></div>
+          <h3 class="service-card__title">Wiring &amp; Rewiring</h3>
+          <p class="service-card__text">New construction wiring, whole-home rewires, and circuit additions. Whether you're building new or updating old knob-and-tube, we get it done to code with clean, lasting results.</p>
+          <a href="contact.html" class="service-card__link">Request Estimate <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Outdoor / Security -->
+        <div class="service-card animate-on-scroll animate-fade-up">
+          <div class="service-card__icon"><i class="fas fa-solar-panel"></i></div>
+          <h3 class="service-card__title">Outdoor &amp; Security Lighting</h3>
+          <p class="service-card__text">Enhance safety and curb appeal with professional outdoor lighting. Security floods, pathway lights, landscape accents, and motion sensors — designed and installed to last.</p>
+          <a href="contact.html" class="service-card__link">Request Estimate <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- EV / Generators -->
+        <div class="service-card animate-on-scroll animate-fade-up">
+          <div class="service-card__icon"><i class="fas fa-charging-station"></i></div>
+          <h3 class="service-card__title">EV Chargers &amp; Generators</h3>
+          <p class="service-card__text">Future-proof your property. We install Level 2 EV chargers for all major brands and wire backup generators so you're never left in the dark when the power goes out.</p>
+          <a href="contact.html" class="service-card__link">Request Estimate <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOT SURE WHAT YOU NEED? ===== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="text-center animate-on-scroll animate-fade-up" style="max-width: 600px; margin: 0 auto;">
+        <h2 style="margin-bottom: 16px;">Not Sure What You Need?</h2>
+        <p>No problem. Give us a call or send us a message describing what's going on, and we'll help you figure out the best solution. No pressure, no obligation.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px; align-items: center; margin-top: 24px;">
+          <a href="contact.html" class="btn btn--primary btn--lg">Describe Your Project</a>
+          <a href="tel:+15551234567" class="btn btn--dark btn--lg"><i class="fas fa-phone"></i> Call (555) 123-4567</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section">
+    <div class="cta-section__content">
+      <h2 class="animate-on-scroll animate-fade-up">Ready to Get Your Project Started?</h2>
+      <p class="animate-on-scroll animate-fade-up">Request a free estimate and we'll get back to you quickly with honest pricing and a clear plan.</p>
+      <div class="cta-section__buttons animate-on-scroll animate-fade-up">
+        <a href="contact.html" class="btn btn--primary btn--lg btn--pulse">Request Estimate</a>
+        <a href="tel:+15551234567" class="btn btn--white btn--lg"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+      <div class="cta-section__phone animate-on-scroll animate-fade-up">
+        <a href="tel:+15551234567"><i class="fas fa-phone"></i> (555) 123-4567</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="logo.png" alt="Papa Bear Power" class="footer__logo" width="160" height="80">
+          <p class="footer__tagline">Reliable electrical work done right. Safe, professional service you can trust.</p>
+        </div>
+        <div>
+          <h4 class="footer__heading">Navigation</h4>
+          <div class="footer__links">
+            <a href="index.html" class="footer__link"><i class="fas fa-chevron-right"></i> Home</a>
+            <a href="about.html" class="footer__link"><i class="fas fa-chevron-right"></i> About</a>
+            <a href="services.html" class="footer__link"><i class="fas fa-chevron-right"></i> Services</a>
+            <a href="projects.html" class="footer__link"><i class="fas fa-chevron-right"></i> Projects</a>
+            <a href="contact.html" class="footer__link"><i class="fas fa-chevron-right"></i> Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Services</h4>
+          <div class="footer__links">
+            <a href="services.html" class="footer__link">Residential Electrical</a>
+            <a href="services.html" class="footer__link">Commercial Electrical</a>
+            <a href="services.html" class="footer__link">Panel Upgrades</a>
+            <a href="services.html" class="footer__link">Lighting Installation</a>
+            <a href="services.html" class="footer__link">Repairs &amp; Troubleshooting</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contact Us</h4>
+          <div class="footer__contact-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+15551234567">(555) 123-4567</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@papabearpower.com">info@papabearpower.com</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Serving the greater metro area</span>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Mon–Fri 7am–6pm, Sat by appt</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        &copy; 2026 Papa Bear Power. All rights reserved. | <a href="#">Powered by Jobryx</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE CTA BAR ===== -->
+  <div class="mobile-cta-bar">
+    <a href="tel:+15551234567" class="mobile-cta-bar__btn">
+      <i class="fas fa-phone"></i> Call Now
+    </a>
+    <a href="contact.html" class="mobile-cta-bar__btn">
+      <i class="fas fa-file-lines"></i> Request Estimate
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
